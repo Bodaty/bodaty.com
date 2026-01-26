@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodaty - Building the Future of Human-AI Collaboration</title>
+    <meta name="description" content="Bodaty LLC is the company behind AICtrlNet and HitLai - AI orchestration products where humans are first-class participants.">
+    <meta property="og:title" content="Bodaty - Building the Future of Human-AI Collaboration">
+    <meta property="og:description" content="The company behind AICtrlNet and HitLai.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bodaty.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 3rem;
+            letter-spacing: -0.5px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .product-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .product-card.aictrlnet:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .product-card.hitlai:hover {
+            border-color: rgba(236, 72, 153, 0.4);
+        }
+
+        .product-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-card.aictrlnet .product-badge {
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+        }
+
+        .product-card.hitlai .product-badge {
+            background: rgba(236, 72, 153, 0.15);
+            color: #f9a8d4;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .product-tagline {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .product-audience {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .product-arrow {
+            display: inline-block;
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover .product-arrow {
+            transform: translateX(4px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Bodaty</div>
+
+        <h1>Building the Future of Human-AI Collaboration</h1>
+
+        <p class="subtitle">
+            We're creating AI orchestration products where humans are first-class participants, not afterthoughts.
+        </p>
+
+        <div class="products">
+            <a href="https://aictrlnet.com" class="product-card aictrlnet">
+                <div class="product-badge">For Developers</div>
+                <div class="product-name">AICtrlNet <span class="product-arrow">→</span></div>
+                <div class="product-tagline">Open core AI orchestration platform with native human-in-the-loop architecture.</div>
+                <div class="product-audience">MIT-licensed Community Edition • Private Beta</div>
+            </a>
+
+            <a href="https://hitlai.net" class="product-card hitlai">
+                <div class="product-badge">For Businesses</div>
+                <div class="product-name">HitLai <span class="product-arrow">→</span></div>
+                <div class="product-tagline">AI workflows with human oversight. Add AI to your team without losing control.</div>
+                <div class="product-audience">Enterprise-ready • Launching Q1 2026</div>
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://aictrlnet.com">AICtrlNet</a>
+            <a href="https://hitlai.net">HitLai</a>
+            <a href="/about">About</a>
+            <a href="/investors">Investors</a>
+            <a href="/press">Press</a>
+            <a href="/careers">Careers</a>
+        </div>
+        <p>© 2026 Bodaty LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

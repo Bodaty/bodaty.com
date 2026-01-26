@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press - Bodaty</title>
+    <meta name="description" content="Bodaty press resources and media contact.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 650px;
+            width: 100%;
+            padding-top: 2rem;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        .logo a {
+            color: inherit;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        h2 {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        .boilerplate {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .boilerplate-label {
+            font-size: 0.8rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .boilerplate p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .facts {
+            display: grid;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        .fact {
+            display: flex;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .fact-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+            min-width: 120px;
+        }
+        .fact-value {
+            color: #d1d5db;
+            font-size: 0.9rem;
+        }
+        .fact-value a {
+            color: #a5b4fc;
+            text-decoration: none;
+        }
+        .fact-value a:hover {
+            text-decoration: underline;
+        }
+        .contact-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .contact-box p {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .contact-box a {
+            color: #a5b4fc;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><a href="/">Bodaty</a></div>
+
+        <h1>Press</h1>
+
+        <h2>Company Overview</h2>
+        <div class="boilerplate">
+            <div class="boilerplate-label">Boilerplate (Short)</div>
+            <p>
+                Bodaty builds AI orchestration software where humans are first-class participants.
+                The company's products—AICtrlNet (open source) and HitLai (commercial)—power AI
+                workflows with native human-in-the-loop architecture for enterprises that need
+                governance, compliance, and human oversight.
+            </p>
+        </div>
+
+        <h2>Quick Facts</h2>
+        <div class="facts">
+            <div class="fact">
+                <span class="fact-label">Company Name</span>
+                <span class="fact-value">Bodaty LLC</span>
+            </div>
+            <div class="fact">
+                <span class="fact-label">Products</span>
+                <span class="fact-value">
+                    <a href="https://aictrlnet.com">AICtrlNet</a> (platform),
+                    <a href="https://hitlai.net">HitLai</a> (commercial)
+                </span>
+            </div>
+            <div class="fact">
+                <span class="fact-label">Founded</span>
+                <span class="fact-value">2016</span>
+            </div>
+            <div class="fact">
+                <span class="fact-label">Headquarters</span>
+                <span class="fact-value">Naperville, IL (Remote-first)</span>
+            </div>
+            <div class="fact">
+                <span class="fact-label">Founder</span>
+                <span class="fact-value">Bobby Koritala, CEO</span>
+            </div>
+            <div class="fact">
+                <span class="fact-label">Funding</span>
+                <span class="fact-value">Raising Seed Round</span>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>Media Contact</h3>
+            <p>For press inquiries, interviews, or media resources:</p>
+            <a href="mailto:press@bodaty.com">press@bodaty.com</a>
+        </div>
+
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>
