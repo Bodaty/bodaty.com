@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Bodaty</title>
-    <meta name="description" content="About Bodaty LLC - Building the future of human-AI collaboration.">
+    <meta name="description" content="Bodaty LLC is a technology company building software products and delivering specialized technical services across enterprise AI, consumer applications, and government services.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,10 +30,20 @@
             font-weight: 700;
             color: white;
             margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
         }
         .logo a {
             color: inherit;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .logo img {
+            height: 28px;
+            width: auto;
         }
         h1 {
             font-size: 2.5rem;
@@ -47,17 +57,65 @@
             margin-bottom: 1.5rem;
             font-size: 1.05rem;
         }
-        .founder-section {
+        .content a {
+            color: #a5b4fc;
+            text-decoration: none;
+        }
+        .content a:hover {
+            text-decoration: underline;
+        }
+        .section-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
             padding: 2rem;
             margin: 2rem 0;
         }
-        .founder-section h2 {
+        .section-card h2 {
             font-size: 1.25rem;
             margin-bottom: 1rem;
             color: white;
+        }
+        .section-card p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        .section-card p:last-child {
+            margin-bottom: 0;
+        }
+        .portfolio-list {
+            list-style: none;
+            padding: 0;
+        }
+        .portfolio-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .portfolio-list li:last-child {
+            border-bottom: none;
+        }
+        .portfolio-list .name {
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .portfolio-list .name a {
+            color: #a5b4fc;
+            text-decoration: none;
+        }
+        .portfolio-list .name a:hover {
+            text-decoration: underline;
+        }
+        .portfolio-list .desc {
+            color: #6b7280;
+            font-size: 0.85rem;
+            text-align: right;
+            max-width: 55%;
         }
         .founder-info {
             display: flex;
@@ -149,32 +207,88 @@
             .founder-links {
                 justify-content: center;
             }
+            .portfolio-list li {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            .portfolio-list .desc {
+                text-align: left;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo"><a href="/">Bodaty</a></div>
+        <div class="logo"><a href="/"><img src="/logo-icon.png" alt="Bodaty">Bodaty</a></div>
 
         <h1>About Us</h1>
 
         <div class="content">
             <p>
-                Bodaty LLC builds software that bridges AI capabilities with human expertise.
-                We believe the future of AI is collaborative—not autonomous.
+                Bodaty LLC is a technology company that builds software products and delivers
+                specialized technical services. Our portfolio spans enterprise AI, consumer
+                applications, payments, and government services.
+            </p>
+            <p style="font-style: italic; font-size: 0.95rem;">
+                Bodaty (&#x092C;&#x094B;&#x0927;&#x0924;&#x093F;) — from Sanskrit: "to perceive, learn, awaken."
             </p>
             <p>
-                Founded by Bobby Koritala, we observed that AI systems consistently fail in production
-                when they ignore human judgment. The problem isn't the AI—it's the architecture.
-            </p>
-            <p>
-                Our products—<a href="https://aictrlnet.com" style="color: #a5b4fc;">AICtrlNet</a> and
-                <a href="https://hitlai.net" style="color: #f9a8d4;">HitLai</a>—power AI workflows where
-                humans are first-class participants, not afterthoughts.
+                Our current flagship products are <a href="https://aictrlnet.com">AICtrlNet</a>,
+                an AI-powered universal automation platform, and
+                <a href="https://hitlai.net">HitLai</a>, its enterprise-ready workflow interface.
+                Together, they enable organizations to automate anything — safely, at whatever
+                pace they're comfortable with.
             </p>
         </div>
 
-        <div class="founder-section">
+        <div class="section-card">
+            <h2>Product Portfolio</h2>
+            <ul class="portfolio-list">
+                <li>
+                    <span class="name"><a href="https://aictrlnet.com">AICtrlNet</a></span>
+                    <span class="desc">AI-powered universal automation platform</span>
+                </li>
+                <li>
+                    <span class="name"><a href="https://hitlai.net">HitLai</a></span>
+                    <span class="desc">AI workflows with human oversight</span>
+                </li>
+                <li>
+                    <span class="name"><a href="https://chatmemoir.com">ChatMemoir</a></span>
+                    <span class="desc">AI-powered family memoir creation</span>
+                </li>
+                <li>
+                    <span class="name"><a href="https://samyata.com">Samyata</a></span>
+                    <span class="desc">Local shopping marketplace</span>
+                </li>
+                <li>
+                    <span class="name"><a href="https://samyatastore.com">Samyata Store</a></span>
+                    <span class="desc">Retail inventory and discovery</span>
+                </li>
+                <li>
+                    <span class="name"><a href="https://samyatapersonalshopper.com">Samyata Personal Shopper</a></span>
+                    <span class="desc">Personal shopping business platform</span>
+                </li>
+                <li>
+                    <span class="name">Samyata Gives</span>
+                    <span class="desc">Charitable giving through shopping</span>
+                </li>
+                <li>
+                    <span class="name"><a href="https://deyapay.com">deyaPay</a></span>
+                    <span class="desc">Payments and expense splitting</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2>Technical Services</h2>
+            <p>
+                Bodaty delivers specialized technical services under federal government contracts,
+                including electron microscopy training and support for national research laboratories.
+            </p>
+        </div>
+
+        <div class="section-card">
             <h2>Founder</h2>
             <div class="founder-info">
                 <div class="founder-avatar">BK</div>
@@ -182,7 +296,7 @@
                     <h3>Bobby Koritala</h3>
                     <div class="title">Founder & CEO</div>
                     <div class="bio">
-                        20+ years building enterprise software. Multiple AI patents.
+                        20+ years building enterprise software. Multiple patents.
                         Previously Chief Product Officer at Infogix (now Precisely),
                         Director at Protiviti, and Director at SPSS (now IBM).
                         MBA from Kellogg School of Management.
@@ -210,7 +324,7 @@
             </div>
         </div>
 
-        <a href="/" class="back-link">← Back to Home</a>
+        <a href="/" class="back-link">&larr; Back to Home</a>
     </div>
 </body>
 </html>

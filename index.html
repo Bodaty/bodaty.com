@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodaty - Building the Future of Human-AI Collaboration</title>
-    <meta name="description" content="Bodaty LLC is the company behind AICtrlNet and HitLai - AI orchestration products where humans are first-class participants.">
-    <meta property="og:title" content="Bodaty - Building the Future of Human-AI Collaboration">
-    <meta property="og:description" content="The company behind AICtrlNet and HitLai.">
+    <title>Bodaty - Technology Products & Services</title>
+    <meta name="description" content="Bodaty LLC is a technology company that builds software products and delivers specialized technical services — spanning enterprise AI, consumer applications, payments, and government services.">
+    <meta property="og:title" content="Bodaty - Technology Products & Services">
+    <meta property="og:description" content="Software products and specialized technical services.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bodaty.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 2rem;
             flex: 1;
@@ -44,6 +44,14 @@
             color: white;
             margin-bottom: 3rem;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo img {
+            height: 32px;
+            width: auto;
         }
 
         h1 {
@@ -59,7 +67,16 @@
             color: #9ca3af;
             line-height: 1.6;
             margin-bottom: 3rem;
-            max-width: 600px;
+            max-width: 650px;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6b7280;
+            margin-bottom: 1rem;
         }
 
         .products {
@@ -143,6 +160,70 @@
             transform: translateX(4px);
         }
 
+        /* Portfolio section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .portfolio-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .portfolio-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.35rem;
+        }
+
+        .portfolio-desc {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            line-height: 1.4;
+        }
+
+        .portfolio-meta {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+
+        /* Services section */
+        .services-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .services-card p {
+            font-size: 0.95rem;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -175,6 +256,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
             .footer-links {
                 gap: 1rem;
             }
@@ -183,28 +268,72 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo">Bodaty</div>
+        <div class="logo"><img src="/logo-icon.png" alt="Bodaty">Bodaty</div>
 
-        <h1>Building the Future of Human-AI Collaboration</h1>
+        <h1>Technology Products & Services</h1>
 
         <p class="subtitle">
-            We're creating AI orchestration products where humans are first-class participants, not afterthoughts.
+            Bodaty LLC builds software products and delivers specialized technical services
+            — spanning enterprise AI, consumer applications, payments, and government services.
         </p>
 
+        <div class="section-label">Flagship Products</div>
         <div class="products">
             <a href="https://aictrlnet.com" class="product-card aictrlnet">
-                <div class="product-badge">For Developers</div>
-                <div class="product-name">AICtrlNet <span class="product-arrow">→</span></div>
-                <div class="product-tagline">Open core AI orchestration platform with native human-in-the-loop architecture.</div>
-                <div class="product-audience">MIT-licensed Community Edition • Private Beta</div>
+                <div class="product-badge">Enterprise AI</div>
+                <div class="product-name">AICtrlNet <span class="product-arrow">&rarr;</span></div>
+                <div class="product-tagline">AI-powered universal automation platform with governed orchestration. Automate anything — safely.</div>
+                <div class="product-audience">Open core &bull; MIT-licensed Community Edition</div>
             </a>
 
             <a href="https://hitlai.net" class="product-card hitlai">
                 <div class="product-badge">For Businesses</div>
-                <div class="product-name">HitLai <span class="product-arrow">→</span></div>
+                <div class="product-name">HitLai <span class="product-arrow">&rarr;</span></div>
                 <div class="product-tagline">AI workflows with human oversight. Add AI to your team without losing control.</div>
-                <div class="product-audience">Enterprise-ready • Launching Q1 2026</div>
+                <div class="product-audience">Enterprise-ready &bull; Business &amp; Enterprise editions</div>
             </a>
+        </div>
+
+        <div class="section-label">Consumer Products</div>
+        <div class="portfolio-grid">
+            <a href="https://chatmemoir.com" class="portfolio-card">
+                <div class="portfolio-name">ChatMemoir</div>
+                <div class="portfolio-desc">AI-powered family memoir creation. Talk, and let AI write your story.</div>
+                <div class="portfolio-meta">iOS &bull; Android &bull; Web</div>
+            </a>
+
+            <a href="https://samyata.com" class="portfolio-card">
+                <div class="portfolio-name">Samyata</div>
+                <div class="portfolio-desc">Local shopping marketplace connecting customers with personal shoppers and nearby stores.</div>
+                <div class="portfolio-meta">iOS &bull; Android</div>
+            </a>
+
+            <a href="https://samyatastore.com" class="portfolio-card">
+                <div class="portfolio-name">Samyata Store</div>
+                <div class="portfolio-desc">Inventory and discovery platform for local retailers. Put your store on the map.</div>
+                <div class="portfolio-meta">iOS &bull; Android &bull; Web</div>
+            </a>
+
+            <a href="https://samyatapersonalshopper.com" class="portfolio-card">
+                <div class="portfolio-name">Samyata Personal Shopper</div>
+                <div class="portfolio-desc">Build your own personal shopping and delivery business. Set your rates, choose your hours.</div>
+                <div class="portfolio-meta">iOS &bull; Android</div>
+            </a>
+
+            <a href="https://deyapay.com" class="portfolio-card">
+                <div class="portfolio-name">deyaPay</div>
+                <div class="portfolio-desc">Pay any way you want. Split costs with friends. Integrated payment platform.</div>
+                <div class="portfolio-meta">iOS &bull; Android</div>
+            </a>
+        </div>
+
+        <div class="section-label">Technical Services</div>
+        <div class="services-card">
+            <h3>Government Services</h3>
+            <p>
+                Bodaty delivers specialized technical services under federal contracts, including
+                electron microscopy training and support for national research laboratories.
+            </p>
         </div>
 
     </div>
@@ -219,7 +348,7 @@
             <a href="/press">Press</a>
             <a href="/careers">Careers</a>
         </div>
-        <p>© 2026 Bodaty LLC. All rights reserved.</p>
+        <p>&copy; 2026 Bodaty LLC. All rights reserved.</p>
     </footer>
 </body>
 </html>
