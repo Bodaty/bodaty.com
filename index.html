@@ -3,352 +3,477 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodaty - Technology Products & Services</title>
-    <meta name="description" content="Bodaty LLC is a technology company that builds software products and delivers specialized technical services — spanning enterprise AI, consumer applications, payments, and government services.">
-    <meta property="og:title" content="Bodaty - Technology Products & Services">
-    <meta property="og:description" content="Software products and specialized technical services.">
+    <title>Bodaty — Technology Products &amp; Services</title>
+    <meta name="description" content="Bodaty LLC builds software products and delivers specialized technical services — spanning enterprise AI, consumer applications, payments, and government services.">
+
+    <link rel="canonical" href="https://bodaty.com/">
+
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bodaty.com">
+    <meta property="og:site_name" content="Bodaty">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Bodaty — Technology Products &amp; Services">
+    <meta property="og:description" content="Bodaty LLC builds software products and delivers specialized technical services — spanning enterprise AI, consumer applications, payments, and government services.">
+    <meta property="og:url" content="https://bodaty.com/">
+    <meta property="og:image" content="https://bodaty.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bodaty — Software products and specialized technical services.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bodaty — Technology Products &amp; Services">
+    <meta name="twitter:description" content="Software products and specialized technical services — enterprise AI, consumer applications, payments, government services.">
+    <meta name="twitter:image" content="https://bodaty.com/og-image.png">
+    <meta name="twitter:image:alt" content="Bodaty — Technology Products and Services.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://bodaty.com/#org",
+          "name": "Bodaty LLC",
+          "url": "https://bodaty.com/",
+          "logo": "https://bodaty.com/icon-512.png",
+          "description": "Bodaty LLC builds software products and delivers specialized technical services — spanning enterprise AI, consumer applications, payments, and government services.",
+          "founder": { "@type": "Person", "name": "Bobby Koritala" },
+          "sameAs": [
+            "https://aictrlnet.com/",
+            "https://hitlai.net/",
+            "https://chatmemoir.com/",
+            "https://samyata.com/",
+            "https://deyapay.com/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Bodaty",
+          "url": "https://bodaty.com/",
+          "publisher": { "@id": "https://bodaty.com/#org" }
+        }
+      ]
+    }
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg:        #0a0a0a;
+            --bg-2:      #141414;
+            --bg-3:      #1c1c1c;
+            --line:      rgba(212, 160, 23, 0.10);
+            --line-soft: rgba(255, 255, 255, 0.06);
+            --ink:       #f0ede5;
+            --ink-soft:  #c5c0b3;
+            --ink-dim:   #8a8579;
+            --ink-faint: #555047;
+            --accent:    #d4a017;
+            --accent-2:  #f5c542;
+            --accent-dim:#8a6b13;
+            --accent-glow: rgba(212, 160, 23, 0.22);
+
+            --font: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.001ms !important;
+                transition-duration: 0.001ms !important;
+            }
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
+            font-family: var(--font);
+            font-weight: 400;
+            background: var(--bg);
+            color: var(--ink-soft);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
             min-height: 100vh;
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background: radial-gradient(ellipse 900px 600px at 85% 75%, rgba(212, 160, 23, 0.06) 0%, transparent 65%);
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px; left: 16px;
+            background: var(--accent);
+            color: var(--bg);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-family: var(--font); font-weight: 700;
+            text-decoration: none;
+            z-index: 100;
+        }
+        .skip-link:focus-visible { top: 16px; }
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 2rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            padding: 48px 32px 24px;
         }
 
-        .logo {
-            font-size: 1.5rem;
+        header {
+            display: flex; align-items: center;
+            gap: 14px;
+            margin-bottom: 64px;
+            opacity: 0; animation: enter 0.7s var(--ease) 0.05s forwards;
+        }
+        .logo-mark {
+            width: 38px; height: 38px;
+            display: grid; place-items: center;
+        }
+        .logo-mark img {
+            width: 38px; height: auto;
+            display: block;
+        }
+        .logo-text {
+            font-family: var(--font);
             font-weight: 700;
-            color: white;
-            margin-bottom: 3rem;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .logo img {
-            height: 32px;
-            width: auto;
+            font-size: 22px;
+            color: var(--ink);
+            letter-spacing: -0.4px;
         }
 
         h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-family: var(--font);
             font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: white;
+            font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            color: var(--ink);
+            margin-bottom: 18px;
+            max-width: 740px;
+            opacity: 0; animation: enter 0.7s var(--ease) 0.15s forwards;
+        }
+        h1 em {
+            font-style: normal;
+            color: var(--accent);
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: #9ca3af;
-            line-height: 1.6;
-            margin-bottom: 3rem;
-            max-width: 650px;
+        .lead {
+            font-size: 1.15rem;
+            line-height: 1.65;
+            color: var(--ink-soft);
+            max-width: 680px;
+            margin-bottom: 56px;
+            opacity: 0; animation: enter 0.7s var(--ease) 0.25s forwards;
         }
 
         .section-label {
-            font-size: 0.8rem;
+            font-family: var(--font);
             font-weight: 600;
+            font-size: 11.5px;
+            letter-spacing: 2.8px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #6b7280;
-            margin-bottom: 1rem;
+            color: var(--ink-faint);
+            margin-bottom: 18px;
         }
 
-        .products {
+        /* Flagship products: 2-up */
+        .flagship {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
+            gap: 18px;
+            margin-bottom: 56px;
         }
-
         .product-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 2rem;
+            display: block;
+            position: relative;
+            background: var(--bg-2);
+            border: 1px solid var(--line-soft);
+            border-radius: 14px;
+            padding: 32px;
             text-decoration: none;
             color: inherit;
-            transition: all 0.2s ease;
+            transition: all 250ms var(--ease);
+            overflow: hidden;
         }
-
-        .product-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
+        .product-card::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent 60%, var(--accent));
+            opacity: 0;
+            transition: opacity 250ms var(--ease);
         }
+        .product-card:hover { transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.12); }
+        .product-card:hover::after { opacity: 1; }
 
         .product-card.aictrlnet:hover {
-            border-color: rgba(99, 102, 241, 0.4);
+            border-color: rgba(34, 211, 238, 0.30);
         }
+        .product-card.aictrlnet::after {
+            background: linear-gradient(90deg, transparent 60%, #22d3ee);
+        }
+        .product-card.aictrlnet .product-name { color: #67e8f9; }
 
         .product-card.hitlai:hover {
-            border-color: rgba(236, 72, 153, 0.4);
+            border-color: rgba(251, 113, 133, 0.30);
         }
+        .product-card.hitlai::after {
+            background: linear-gradient(90deg, transparent 60%, #fb7185);
+        }
+        .product-card.hitlai .product-name { color: #fb7185; }
 
         .product-badge {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .product-card.aictrlnet .product-badge {
-            background: rgba(99, 102, 241, 0.15);
-            color: #a5b4fc;
-        }
-
-        .product-card.hitlai .product-badge {
-            background: rgba(236, 72, 153, 0.15);
-            color: #f9a8d4;
-        }
-
-        .product-name {
-            font-size: 1.5rem;
+            font-family: var(--font);
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: white;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--ink-dim);
+            border: 1px solid var(--line-soft);
         }
-
+        .product-name {
+            font-family: var(--font);
+            font-weight: 700;
+            font-size: 28px;
+            letter-spacing: -0.8px;
+            color: var(--ink);
+            margin-bottom: 12px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .arrow {
+            font-size: 22px;
+            color: var(--ink-dim);
+            transition: transform 200ms var(--ease);
+        }
+        .product-card:hover .arrow { transform: translateX(4px); color: var(--accent); }
         .product-tagline {
-            font-size: 1rem;
-            color: #9ca3af;
-            margin-bottom: 1rem;
-            line-height: 1.5;
+            font-size: 15px;
+            color: var(--ink-soft);
+            margin-bottom: 18px;
+            line-height: 1.55;
         }
-
         .product-audience {
-            font-size: 0.85rem;
-            color: #6b7280;
+            font-size: 13px;
+            color: var(--ink-faint);
+            padding-top: 14px;
+            border-top: 1px solid var(--line-soft);
         }
 
-        .product-arrow {
-            display: inline-block;
-            margin-left: 0.5rem;
-            transition: transform 0.2s ease;
-        }
-
-        .product-card:hover .product-arrow {
-            transform: translateX(4px);
-        }
-
-        /* Portfolio section */
-        .portfolio-grid {
+        /* Portfolio grid */
+        .portfolio {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-bottom: 56px;
         }
-
         .portfolio-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            display: block;
+            background: var(--bg-2);
+            border: 1px solid var(--line-soft);
             border-radius: 12px;
-            padding: 1.25rem;
+            padding: 22px;
             text-decoration: none;
             color: inherit;
-            transition: all 0.2s ease;
+            transition: all 250ms var(--ease);
         }
-
         .portfolio-card:hover {
-            background: rgba(255, 255, 255, 0.04);
             border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
         }
-
         .portfolio-name {
-            font-size: 1rem;
+            font-family: var(--font);
             font-weight: 600;
-            color: white;
-            margin-bottom: 0.35rem;
+            font-size: 16px;
+            color: var(--ink);
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
         }
-
         .portfolio-desc {
-            font-size: 0.85rem;
-            color: #9ca3af;
-            line-height: 1.4;
+            font-size: 13.5px;
+            color: var(--ink-soft);
+            line-height: 1.5;
         }
-
         .portfolio-meta {
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-top: 0.5rem;
+            font-size: 11.5px;
+            color: var(--ink-faint);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--line-soft);
+            letter-spacing: 0.3px;
         }
 
-        /* Services section */
-        .services-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+            margin-bottom: 64px;
+        }
+        .service-card {
+            background: var(--bg-2);
+            border: 1px solid var(--line-soft);
             border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 3rem;
+            padding: 26px;
         }
-
-        .services-card h3 {
-            font-size: 1.1rem;
+        .service-card h3 {
+            font-family: var(--font);
             font-weight: 600;
-            color: white;
-            margin-bottom: 0.5rem;
+            font-size: 17px;
+            color: var(--ink);
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
         }
-
-        .services-card p {
-            font-size: 0.95rem;
-            color: #9ca3af;
+        .service-card p {
+            font-size: 14.5px;
+            color: var(--ink-soft);
             line-height: 1.6;
         }
 
         footer {
+            border-top: 1px solid var(--line-soft);
+            margin-top: 24px;
+            padding: 36px 0 16px;
             text-align: center;
-            padding: 2rem;
-            color: #6b7280;
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 13.5px;
+            color: var(--ink-dim);
         }
-
         .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 10px 26px;
+            margin-bottom: 18px;
+            font-size: 13.5px;
         }
-
-        .footer-links a {
-            color: #9ca3af;
+        footer a {
+            color: var(--ink-soft);
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
+            transition: color 200ms var(--ease);
+        }
+        footer a:hover { color: var(--accent); }
+        .footer-meta {
+            font-size: 11px;
+            color: var(--ink-faint);
+            margin-top: 8px;
+            letter-spacing: 0.2px;
         }
 
-        .footer-links a:hover {
-            color: white;
+        @keyframes enter {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 600px) {
-            .products {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-links {
-                gap: 1rem;
-            }
+            .container { padding: 32px 20px 16px; }
+            .product-card { padding: 24px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo"><img src="/logo-icon.png" alt="Bodaty">Bodaty</div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <h1>Technology Products & Services</h1>
+    <main id="main" class="container">
 
-        <p class="subtitle">
-            Bodaty LLC builds software products and delivers specialized technical services
-            — spanning enterprise AI, consumer applications, payments, and government services.
+        <header>
+            <span class="logo-mark"><img src="/icon-192.png" alt="" width="38" height="38" loading="eager" decoding="async"></span>
+            <span class="logo-text">Bodaty</span>
+        </header>
+
+        <h1>Software products and<br>specialized <em>technical&nbsp;services.</em></h1>
+        <p class="lead">
+            Bodaty LLC builds software products and delivers specialized technical services &mdash; spanning enterprise AI, consumer applications, payments, and government services.
         </p>
 
         <div class="section-label">Flagship Products</div>
-        <div class="products">
-            <a href="https://aictrlnet.com" class="product-card aictrlnet">
-                <div class="product-badge">Enterprise AI</div>
-                <div class="product-name">AICtrlNet <span class="product-arrow">&rarr;</span></div>
-                <div class="product-tagline">Governed AI Orchestration platform. Orchestrate AI, humans, and 10,000+ tools — together, safely.</div>
-                <div class="product-audience">Open core &bull; MIT-licensed Community Edition</div>
+        <div class="flagship">
+            <a href="https://aictrlnet.com" class="product-card aictrlnet" aria-label="AICtrlNet — enterprise AI platform">
+                <span class="product-badge">Enterprise AI</span>
+                <h2 class="product-name">AICtrlNet <span class="arrow" aria-hidden="true">&rarr;</span></h2>
+                <p class="product-tagline">Deploy anywhere &mdash; your infrastructure or our managed cloud. Model-independent across any AI. No integration ceiling. The only platform that does all three.</p>
+                <p class="product-audience">Open core &middot; MIT-licensed Community Edition</p>
             </a>
 
-            <a href="https://hitlai.net" class="product-card hitlai">
-                <div class="product-badge">For Businesses</div>
-                <div class="product-name">HitLai <span class="product-arrow">&rarr;</span></div>
-                <div class="product-tagline">AI workflows with the AI Dial. Set the autonomy level that fits each task — without losing control.</div>
-                <div class="product-audience">Enterprise-ready &bull; Business &amp; Enterprise editions</div>
+            <a href="https://hitlai.net" class="product-card hitlai" aria-label="HitLai — AI for business owners">
+                <span class="product-badge">For Businesses</span>
+                <h2 class="product-name">HitLai <span class="arrow" aria-hidden="true">&rarr;</span></h2>
+                <p class="product-tagline">The AI that runs your business &mdash; alongside the people and systems you already have. Ready in minutes.</p>
+                <p class="product-audience">Business &amp; Enterprise editions</p>
             </a>
         </div>
 
         <div class="section-label">Consumer Products</div>
-        <div class="portfolio-grid">
-            <a href="https://chatmemoir.com" class="portfolio-card">
-                <div class="portfolio-name">ChatMemoir</div>
-                <div class="portfolio-desc">AI-powered family memoir creation. Talk, and let AI write your story.</div>
-                <div class="portfolio-meta">iOS &bull; Android &bull; Web</div>
+        <div class="portfolio">
+            <a href="https://chatmemoir.com" class="portfolio-card" aria-label="ChatMemoir — AI memoir creation">
+                <h3 class="portfolio-name">ChatMemoir</h3>
+                <p class="portfolio-desc">AI-powered family memoir creation. Talk, and let AI write your story.</p>
+                <p class="portfolio-meta">iOS &middot; Android &middot; Web</p>
             </a>
-
-            <a href="https://samyata.com" class="portfolio-card">
-                <div class="portfolio-name">Samyata</div>
-                <div class="portfolio-desc">Local shopping marketplace connecting customers with personal shoppers and nearby stores.</div>
-                <div class="portfolio-meta">iOS &bull; Android</div>
+            <a href="https://samyata.com" class="portfolio-card" aria-label="Samyata — local shopping marketplace">
+                <h3 class="portfolio-name">Samyata</h3>
+                <p class="portfolio-desc">Local shopping marketplace connecting customers with personal shoppers and nearby stores.</p>
+                <p class="portfolio-meta">iOS &middot; Android</p>
             </a>
-
-            <a href="https://samyatastore.com" class="portfolio-card">
-                <div class="portfolio-name">Samyata Store</div>
-                <div class="portfolio-desc">Inventory and discovery platform for local retailers. Put your store on the map.</div>
-                <div class="portfolio-meta">iOS &bull; Android &bull; Web</div>
+            <a href="https://samyatastore.com" class="portfolio-card" aria-label="Samyata Store — for local retailers">
+                <h3 class="portfolio-name">Samyata Store</h3>
+                <p class="portfolio-desc">Inventory and discovery platform for local retailers. Put your store on the map.</p>
+                <p class="portfolio-meta">iOS &middot; Android &middot; Web</p>
             </a>
-
-            <a href="https://samyatapersonalshopper.com" class="portfolio-card">
-                <div class="portfolio-name">Samyata Personal Shopper</div>
-                <div class="portfolio-desc">Build your own personal shopping and delivery business. Set your rates, choose your hours.</div>
-                <div class="portfolio-meta">iOS &bull; Android</div>
+            <a href="https://samyatapersonalshopper.com" class="portfolio-card" aria-label="Samyata Personal Shopper">
+                <h3 class="portfolio-name">Samyata Personal Shopper</h3>
+                <p class="portfolio-desc">Build your own personal shopping and delivery business. Set your rates, choose your hours.</p>
+                <p class="portfolio-meta">iOS &middot; Android</p>
             </a>
-
-            <a href="https://deyapay.com" class="portfolio-card">
-                <div class="portfolio-name">deyaPay</div>
-                <div class="portfolio-desc">Pay any way you want. Split costs with friends. Integrated payment platform.</div>
-                <div class="portfolio-meta">iOS &bull; Android</div>
+            <a href="https://deyapay.com" class="portfolio-card" aria-label="deyaPay — integrated payment platform">
+                <h3 class="portfolio-name">deyaPay</h3>
+                <p class="portfolio-desc">Pay any way you want. Split costs with friends. Integrated payment platform.</p>
+                <p class="portfolio-meta">iOS &middot; Android</p>
             </a>
         </div>
 
         <div class="section-label">Services</div>
-        <div class="services-card">
-            <h3>AI Implementation Services</h3>
-            <p>
-                We help organizations adopt AI at their own pace. From identifying automation
-                opportunities to configuring workflows, connecting existing systems, and training
-                teams — our experts work alongside yours to bring AI into your operations
-                without disruption.
-            </p>
-        </div>
-        <div class="services-card">
-            <h3>Government Technical Services</h3>
-            <p>
-                Specialized technical services under federal contracts, including
-                electron microscopy training and support for national research laboratories.
-            </p>
+        <div class="services">
+            <article class="service-card">
+                <h3>AI Implementation Services</h3>
+                <p>We help organizations adopt AI at their own pace. From identifying automation opportunities to configuring workflows, connecting existing systems, and training teams &mdash; our experts work alongside yours to bring AI into your operations without disruption.</p>
+            </article>
+            <article class="service-card">
+                <h3>Government Technical Services</h3>
+                <p>Specialized technical services under federal contracts, including electron microscopy training and support for national research laboratories.</p>
+            </article>
         </div>
 
-    </div>
+    </main>
 
     <footer>
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Footer">
             <a href="https://aictrlnet.com">AICtrlNet</a>
             <a href="https://hitlai.net">HitLai</a>
             <a href="https://blog.bodaty.com">Blog</a>
@@ -356,9 +481,9 @@
             <a href="/investors">Investors</a>
             <a href="/press">Press</a>
             <a href="/careers">Careers</a>
-        </div>
+        </nav>
         <p>&copy; 2026 Bodaty LLC. All rights reserved.</p>
-        <p style="font-size: 0.75rem; color: #888; margin-top: 0.5rem;">AICtrlNet&trade;, HitLai&trade;, and &ldquo;Governed AI Orchestration&rdquo;&trade; are trademarks of Bodaty LLC.</p>
+        <p class="footer-meta">AICtrlNet&trade;, HitLai&trade;, and &ldquo;Governed AI Orchestration&rdquo;&trade; are trademarks of Bodaty LLC.</p>
     </footer>
 </body>
 </html>
