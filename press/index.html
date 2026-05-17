@@ -137,11 +137,21 @@
         .back-link:hover {
             color: white;
         }
+            .subnav{display:flex;flex-wrap:wrap;gap:18px;padding:14px 0 28px;border-bottom:1px solid rgba(255,255,255,0.05);margin-bottom:28px;font-size:13.5px;font-family:'Manrope',sans-serif;font-weight:500}
+        .subnav a{color:#8a8579;text-decoration:none;transition:color 0.2s ease}
+        .subnav a:hover{color:#d4a017}
+        .subnav a[aria-current="page"]{color:#d4a017}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo"><a href="/"><img src="/logo-icon.png" alt="Bodaty">Bodaty</a></div>
+        <nav class="subnav" aria-label="Section">
+            <a href="/about">About</a>
+            <a href="/investors">Investors</a>
+            <a href="/press" aria-current="page">Press</a>
+            <a href="/careers">Careers</a>
+        </nav>
 
         <h1>Press</h1>
 
